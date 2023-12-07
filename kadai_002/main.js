@@ -131,7 +131,7 @@ start.addEventListener('click', () => {
     setTimeout(() => {
         typedfield.style.display = 'none';
         untypedfield.textContent = 'タイムアップ！';
-    }, 60000);
+    }, 59999);
 
     /* カウントダウンタイマー開始 */
     timer();
