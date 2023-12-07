@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* ゲーム全体 */
+body{
+    font-size: 6em;
+    text-align: center;
+}
+
+/* 残り時間廻り */
+.count{
+    margin: 0;
+    font-weight: bold;
+    color: #888;
+}
+
+/* テキスト廻り */
+.wrap{
+    margin-top: 20px;
+    padding: 80px 40px;
+    background-color: #666;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 正しくタイプされた時のテキスト */
+.typed{
+    color: lightgreen;
+}
+
+/* ミスタイプの時の背景 */
+.mistyped{
+    background-color: red;
+}
