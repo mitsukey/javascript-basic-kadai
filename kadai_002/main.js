@@ -93,11 +93,18 @@ const rankCheck = score => {
 
 /* ゲーム終了 */
 const gameOver = id => {
+
+    /* 60秒後に「タイムアップ」表示 */
+    typedfield.style.display = 'none';
+    untypedfield.textContent = 'タイムアップ！';
+
     clearInterval(id);
 
-
     console.log('ゲーム終了！');
-    const result = confirm(rankCheck(score));
+    
+    const result = setTimeout(() => {
+        confirm(rankCheck(score));
+    },10);
 
     /* OKボタンクリックでリロード */
     if (result == true) {
@@ -126,12 +133,6 @@ const timer = () => {
 
 /* ゲームスタート時の処理 */
 start.addEventListener('click', () => {
-
-    /* 60秒後に「タイムアップ」表示 */
-    setTimeout(() => {
-        typedfield.style.display = 'none';
-        untypedfield.textContent = 'タイムアップ！';
-    }, 59999);
 
     /* カウントダウンタイマー開始 */
     timer();
